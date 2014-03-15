@@ -8,6 +8,7 @@
   <title>Simple Masonry Layout With Flexbox - CodePen</title>
 
     <style>
+/*Main Body*/
 body { 
   margin: 0; background: #131212;  
 } 
@@ -25,37 +26,17 @@ div img {
   transition: .8s opacity;
 } 
 div:hover img { opacity: 0.3; }
-div:hover img:hover { opacity: 1; } 
+div:hover img:hover { 
+  opacity: 1;
+  transition: 0.8s;
+  width:50%;
+} 
+#top:hover h1{opacity:0;}
 
-/* Header Style */
-.header{
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 25px;
-    line-height: 24px;
-    font-size: 11px;
-    background: #000;
-    opacity: 0.9;
-    z-index: 20;
-}
-.header h1{
-    padding: 5px 10px;
-    letter-spacing: 1px;
-    color: #fff;
-    text-align: right;
-}
-.header h1:hover{
-    color: #ddd;
-}
-.header h1 span{
-    font-weight: bold;
-}
 
-/* Top Bar */
-.ib-top{
+
+/* top bar */
+.top{
    font-family: 'Arial Narrow', Arial, sans-serif;
     position: fixed;
     top: 0px;
@@ -68,18 +49,55 @@ div:hover img:hover { opacity: 1; }
     opacity: 0.5;
     z-index: 20;
 }
-.ib-top h1{
+.top h1{
     position:absolute;
     top: -8px;
     left: 10px;
     letter-spacing: 1px;
     color: #fff;
     text-align: right;
+    transition: .8s opacity;
 
 }
-.ib-top h1 span{
+.top h1 span{
     color: #555;
     font-size: 12px;
+}
+
+/* bottom Bar */
+.bottom{
+   font-family: 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    line-height: 24px;
+    font-size: 11px;
+    background: #000;
+    opacity: 0.5;
+    z-index: 20;
+}
+.bottom h1{
+    position:absolute;
+    bottom: -10px;
+    left: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: right;
+
+}
+.bottom h1 span{
+    color: #555;
+    font-size: 15px;
+}
+  
+
+.header h1:hover{
+    color: #ddd;
+}
+.header h1 span{
+    font-weight: bold;
 }
 </style>
 
@@ -90,6 +108,14 @@ div:hover img:hover { opacity: 1; }
 <body>
 
   <div class="gallery">
+    <img src="http://sciencelakes.com/data_images/out/12/8805935-cute-girls-pictures.jpg">
+    <img src="http://www.hdwallpapers.org/walls/girl-clock-tattoo-wide.jpg">
+    <img src="http://wallpaper.piicss.com/wp-content/uploads/2013/02/Wallpaper-HD-Girls-47.jpg">
+    <img src="http://www.dariorigon.com/wp-content/uploads/2013/11/Green-Eyes-Girls.jpg">
+    <img src="http://www.dariorigon.com/wp-content/uploads/2013/11/Green-Eyes-Girls.jpg">
+    <img src="http://1.bp.blogspot.com/-b7yFySy--eg/UF2KZjUjOhI/AAAAAAAAAG0/JU_8fwL3KpI/s1600/Alizee+-+Copy+-+Copy+-+Copy.jpg">
+    <img src="http://foundwalls.com/wallpapers/2012/09/Alizee-1024x1024.jpg">
+  
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/1.jpg">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/2.jpg">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/3.jpg">
@@ -98,15 +124,16 @@ div:hover img:hover { opacity: 1; }
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/8.jpg">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/9.jpg">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/7.jpg">
-
-</div>
-
-<div id="header" class="header">
-  <h1>Images: <strong>Ibrahim Iujaz</strong></h1>
-</div>
-<div id="ib-top" class="ib-top">
-  <h1>Gallery <span> of beauty</span></h1>
-</div>
+  
+  
+    </div>
+    
+    <div id="top" class="top">
+      <h1>Gallery <span> of beauty</span></h1>
+    </div>
+    <div id="bottom" class="bottom">
+      <h1> <span>Images: Sean Archer</span></h1>
+    </div>
 
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 
