@@ -1,5 +1,6 @@
 README:
 
+-In development.........
 
 -this is a small photo gallery uploading web application made using ruby + sinatra. 
 
